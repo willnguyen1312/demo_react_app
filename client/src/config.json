@@ -1,0 +1,13 @@
+{
+  "app": {
+    "name": "SRA",
+    "description": "Solicitors Regulation Authority",
+    "version": "0.2.3"
+  },
+  "endpoints": {
+    "BASE": "http://hmsra-gateway.azurewebsites.net/api/",
+    "FORMIO_API": "https://api.form.io/",
+    "FORMIO": "https://sradev.huntermacdonald.website/environment/"
+  },
+  "xhrTimeout": 50000
+}

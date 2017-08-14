@@ -1,0 +1,15 @@
+{
+  "prettier.eslintIntegration": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/*/node_modules": true
+  },
+  "eslint.enable": true,
+  "editor.formatOnSave": true,
+  "javascript.validate.enable": false,
+  "prettier.cssEnable": ["css", "less", "scss"]
+}

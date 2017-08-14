@@ -1,0 +1,31 @@
+{
+  "name": "react-express-sra",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Nam Nguyen <nam.nguyen@huntermacdonald.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "build": "cd client && yarn build",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "client": "cd client && yarn start",
+    "server": "nodemon app.js",
+    "serve": "concurrently \"yarn server\" \"yarn client\""
+  },
+  "dependencies": {
+    "compression": "^1.7.0",
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^20.0.4",
+    "babel-eslint": "^7.2.3",
+    "concurrently": "^3.5.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-flowtype": "^2.35.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "nodemon": "^1.11.0"
+  }
+}
