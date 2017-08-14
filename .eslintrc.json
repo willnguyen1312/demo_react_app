@@ -7,9 +7,10 @@
     "jest": true
   },
   "rules": {
-    "comma-dangle": "off",
-    "arrow-parens": "off",
+    "comma-dangle": 0,
+    "arrow-parens": 0,
     "semi": ["error", "never"],
-    "react/jsx-filename-extension": "off"
+    "react/jsx-filename-extension": 0,
+    "import/no-extraneous-dependencies": 0
   }
 }

@@ -29,7 +29,7 @@ class Login extends Component {
       username,
       password,
     })
-    return fetch('http://hmsra-gateway.azurewebsites.net/api/authentication/auth/login', {
+    return fetch('https://hmsra-gateway.azurewebsites.net/api/authentication/auth/login', {
       method: 'POST',
       headers: {
         Accept: 'application/json, text/plain, */*',

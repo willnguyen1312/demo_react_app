@@ -1,13 +1,7 @@
 {
   "app": {
-    "name": "SRA",
-    "description": "Solicitors Regulation Authority",
-    "version": "0.2.3"
+    "name": "Nam's React Demo App",
+    "description": "Demonstration of React's expertise"
   },
-  "endpoints": {
-    "BASE": "http://hmsra-gateway.azurewebsites.net/api/",
-    "FORMIO_API": "https://api.form.io/",
-    "FORMIO": "https://sradev.huntermacdonald.website/environment/"
-  },
-  "xhrTimeout": 50000
+  "xhrTimeout": 12000
 }
