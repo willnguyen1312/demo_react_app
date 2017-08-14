@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import './Home.css'
+import HomeWrapper from './Wrapper'
 
 // eslint-disable-next-line
 class Home extends Component {
   render() {
     return (
-      <div className="Home">
+      <HomeWrapper>
         <div className="lander">
           <h1>Scratch</h1>
           <p>A simple note taking app</p>
@@ -19,7 +19,7 @@ class Home extends Component {
             </Link>
           </div>
         </div>
-      </div>
+      </HomeWrapper>
     )
   }
 }

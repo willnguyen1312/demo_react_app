@@ -2,9 +2,8 @@
 import React, { Component } from 'react'
 import { FormGroup, FormControl, ControlLabel } from 'react-bootstrap'
 import { withRouter } from 'react-router-dom'
-import LoaderButton from '../components/LoaderButton'
-import './Login.css'
-// import config from '../config.json'
+import LoaderButton from '../../components/LoaderButton'
+import LoginWrapper from './Wrapper'
 
 class Login extends Component {
   state = {
@@ -61,7 +60,7 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="Login">
+      <LoginWrapper>
         <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="username" bsSize="large">
             <ControlLabel>Email</ControlLabel>
@@ -81,7 +80,7 @@ class Login extends Component {
             loadingText="Logging in…"
           />
         </form>
-      </div>
+      </LoginWrapper>
     )
   }
 }

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { HelpBlock, FormGroup, FormControl, ControlLabel } from 'react-bootstrap'
-import LoaderButton from '../components/LoaderButton'
-import './Signup.css'
+import LoaderButton from '../../components/LoaderButton'
+import SignUpWrapper from './Wrapper'
 
 class Signup extends Component {
   constructor(props) {
@@ -117,9 +117,9 @@ class Signup extends Component {
 
   render() {
     return (
-      <div className="Signup">
+      <SignUpWrapper>
         {this.state.newUser === null ? this.renderForm() : this.renderConfirmationForm()}
-      </div>
+      </SignUpWrapper>
     )
   }
 }

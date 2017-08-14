@@ -16,7 +16,7 @@ const AsyncHome = LoadableVisibility({
 })
 
 const AsyncLogin = LoadableVisibility({
-  loader: () => import('./containers/Login.js'),
+  loader: () => import('./containers/Login'),
   loading: LoadingComponent,
 })
 

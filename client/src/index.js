@@ -1,7 +1,5 @@
 import React from 'react'
 import { render } from 'react-dom'
-import 'sanitize.css/sanitize.css'
-import 'bootstrap/dist/css/bootstrap.css'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 
 // Needed for onTouchTap

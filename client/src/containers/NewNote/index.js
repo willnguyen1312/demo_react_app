@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { FormGroup, FormControl, ControlLabel } from 'react-bootstrap'
-import LoaderButton from '../components/LoaderButton'
-import './NewNote.css'
+import LoaderButton from '../../components/LoaderButton'
+import NewNoteWrapper from './Wrapper'
 
 class NewNote extends Component {
   constructor(props) {
@@ -44,7 +44,7 @@ class NewNote extends Component {
 
   render() {
     return (
-      <div className="NewNote">
+      <NewNoteWrapper>
         <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="content">
             <FormControl
@@ -68,7 +68,7 @@ class NewNote extends Component {
             loadingText="Creating…"
           />
         </form>
-      </div>
+      </NewNoteWrapper>
     )
   }
 }

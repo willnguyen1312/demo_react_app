@@ -1,7 +1,7 @@
 import React from 'react'
-import './NotFound.css'
+import NotFoundWrapper from './Wrapper'
 
 export default () =>
-  (<div className="NotFound">
+  (<NotFoundWrapper>
     <h3>Sorry, page not found!</h3>
-  </div>)
+  </NotFoundWrapper>)
