@@ -10,7 +10,8 @@
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
     "client": "cd client && yarn start",
     "server": "nodemon app.js",
-    "serve": "concurrently \"yarn server\" \"yarn client\""
+    "serve": "concurrently \"yarn server\" \"yarn client\"",
+    "setup": "yarn && cd client && yarn"
   },
   "dependencies": {
     "compression": "^1.7.0",
