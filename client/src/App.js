@@ -3,31 +3,13 @@ import { Link, withRouter } from 'react-router-dom'
 import { Navbar, Nav, NavItem } from 'react-bootstrap'
 import RouteNavItem from './components/RouteNavItem'
 import Routes from './Routes'
-import './App.css'
+import AppWrapper from './AppWrapper'
 
 class App extends Component {
   state = {
     userToken: null,
     isLoadingUserToken: true,
   }
-
-  // async componentDidMount() {
-  //   const currentUser = this.getCurrentUser()
-
-  //   if (currentUser === null) {
-  //     this.setState({ isLoadingUserToken: false })
-  //     return
-  //   }
-
-  //   try {
-  //     const userToken = await this.getUserToken(currentUser)
-  //     this.updateUserToken(userToken)
-  //   } catch (e) {
-  //     console.log(e)
-  //   }
-
-  //   this.setState({ isLoadingUserToken: false })
-  // }
   props: {
     history: any,
   }
@@ -51,7 +33,7 @@ class App extends Component {
       updateUserToken: this.updateUserToken,
     }
     return (
-      <div className="App container">
+      <AppWrapper>
         <Navbar fluid collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
@@ -66,16 +48,16 @@ class App extends Component {
                 : [
                   <RouteNavItem key={1} onClick={this.handleNavLink} href="/signup">
                       Signup
-                    </RouteNavItem>,
+                  </RouteNavItem>,
                   <RouteNavItem key={2} onClick={this.handleNavLink} href="/login">
                       Login
-                    </RouteNavItem>,
+                  </RouteNavItem>,
                 ]}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
         <Routes childProps={childProps} />
-      </div>
+      </AppWrapper>
     )
   }
 }
