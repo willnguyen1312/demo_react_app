@@ -19,8 +19,5 @@
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:3001",
-  "devDependencies": {
-    "glob": "^7.1.2",
-    "purify-css": "^1.2.5"
-  }
+  "devDependencies": {}
 }
