@@ -17,4 +17,7 @@ app.get('*', (req, res) => {
 })
 
 const port = process.env.PORT || 3001
+
+// eslint-disable-next-line
+console.log('Web server available : http://localhost:3001')
 app.listen(port)

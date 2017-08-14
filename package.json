@@ -11,7 +11,8 @@
     "client": "cd client && yarn start",
     "server": "nodemon app.js",
     "serve": "concurrently \"yarn server\" \"yarn client\"",
-    "setup": "yarn && cd client && yarn"
+    "setup": "yarn && cd client && yarn",
+    "production": "yarn build && yarn server"
   },
   "dependencies": {
     "compression": "^1.7.0",
