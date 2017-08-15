@@ -32,10 +32,10 @@ const renderedNode = (
 
 render(renderedNode, rootEl)
 
-if (module.hot) {
-  module.hot.accept('./App', () => {
-    render(renderedNode, rootEl)
-  })
-}
+// if (module.hot) {
+//   module.hot.accept('./App', () => {
+//     render(renderedNode, rootEl)
+//   })
+// }
 
 registerServiceWorker()

@@ -4,7 +4,7 @@
 import { Map } from 'immutable'
 import { combineReducers } from 'redux-immutable'
 import { LOCATION_CHANGE } from 'react-router-redux'
-import { reducer as reduxFormReducer } from 'redux-form'
+import { reducer as reduxFormReducer } from 'redux-form/immutable'
 // Initial routing state
 const routeInitialState = Map({
   location: null,
