@@ -1,8 +1,10 @@
 // @flow
 import React from 'react'
-import { withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
+// import { withRouter } from 'react-router-dom'
 // import { FormGroup, FormControl, ControlLabel } from 'react-bootstrap'
 // import LoaderButton from '../../components/LoaderButton'
+import { requestLogin } from './actions'
 import LoginWrapper from './Wrapper'
 import MaterialUiForm from '../../components/LoginForm'
 
@@ -32,11 +34,11 @@ import MaterialUiForm from '../../components/LoginForm'
 //     })
 //     return fetch('https://hmsra-gateway.azurewebsites.net/api/authentication/auth/login', {
 //       method: 'POST',
-//       headers: {
-//         Accept: 'application/json, text/plain, */*',
-//         'Content-Type': 'application/json',
-//         Entity: 'contact',
-//       },
+// headers: {
+//   Accept: 'application/json, text/plain, */*',
+//   'Content-Type': 'application/json',
+//   Entity: 'contact',
+// },
 //       body: data,
 //     })
 //       .then(response => response.json())
@@ -85,16 +87,20 @@ import MaterialUiForm from '../../components/LoginForm'
 //     )
 //   }
 // }
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
-const showResults = async values => {
-  await sleep(500) // simulate server latency
-  // eslint-disable-next-line
-  window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`)
-}
+// const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+// const showResults = async values => {
+//   await sleep(500) // simulate server latency
+//   // eslint-disable-next-line
+//   window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`)
+// }
 
-const Login = () =>
+// eslint-disable-next-line
+const Login = ({ requestLogin: login }) =>
   (<LoginWrapper>
-    <MaterialUiForm onSubmit={showResults} />
+    <MaterialUiForm onSubmit={login} />
   </LoginWrapper>)
 
-export default withRouter(Login)
+// export default withRouter(Login)
+export default connect(null, {
+  requestLogin,
+})(Login)

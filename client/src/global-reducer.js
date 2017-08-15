@@ -5,10 +5,18 @@ import { Map } from 'immutable'
 import { combineReducers } from 'redux-immutable'
 import { LOCATION_CHANGE } from 'react-router-redux'
 import { reducer as reduxFormReducer } from 'redux-form/immutable'
+import loginReducer from './containers/Login/reducer'
 // Initial routing state
 const routeInitialState = Map({
   location: null,
 })
+
+// const containersReducer = {
+//   containers: combineReducers({
+//     loginReducer,
+//     // NOTE: put other app reducers here
+//   }),
+// }
 
 function routeReducer(state = routeInitialState, action) {
   switch (action.type) {
@@ -34,6 +42,8 @@ function routeReducer(state = routeInitialState, action) {
 
 const createGlobalReducer = () =>
   combineReducers({
+    // ...containersReducer,
+    login: loginReducer,
     form: reduxFormReducer,
     route: routeReducer,
   })

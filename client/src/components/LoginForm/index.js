@@ -3,12 +3,19 @@ import React from 'react'
 import { Field, reduxForm } from 'redux-form/immutable'
 import TextField from 'material-ui/TextField'
 import { RaisedButton } from 'material-ui'
+import Immutable from 'immutable'
 
+/**
+ * 
+ * 
+ * @param {Immutable.Map} values 
+ * @returns 
+ */
 const validate = values => {
   const errors = {}
   const requiredFields = ['username', 'password']
   requiredFields.forEach(field => {
-    if (!values[field]) {
+    if (!values.get(field)) {
       errors[field] = 'Required'
     }
   })
