@@ -23,7 +23,7 @@ The project includes extra redux packages and improved file structure.
 devDependencies:
 - eslint (based on Airbnb rules)
 
-## Outstanding features that was added to the app
+## Outstanding features that are added to the app
 - CSS-in-JS
 - Code splitting based on Routes and Components
 - Progressive Web App - Service Worker with cache first stategy
