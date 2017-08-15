@@ -2,6 +2,8 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import injectTapEventPlugin from 'react-tap-event-plugin'
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { ConnectedRouter } from 'react-router-redux'
 
 // Needed for onTouchTap
@@ -21,7 +23,9 @@ const history = createHistory()
 const renderedNode = (
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <App />
+      <MuiThemeProvider muiTheme={getMuiTheme()}>
+        <App />
+      </MuiThemeProvider>
     </ConnectedRouter>
   </Provider>
 )
