@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import React from 'react'
+import { connect } from 'react-redux'
 import HomeWrapper from './Wrapper'
+import { fetchQuote, fetchSecretQuote } from './actions'
 
 // eslint-disable-next-line
 // class Home extends Component {
@@ -24,12 +25,19 @@ import HomeWrapper from './Wrapper'
 //   }
 // }
 
-const Home = () =>
+// eslint-disable-next-line
+const Home = ({ fetchQuote: quote }) =>
   (<HomeWrapper>
     <div className="lander">
       <h1>Scratch</h1>
       <p>A simple note taking app</p>
+      <button onClick={quote} className="btn btn-primary">
+        Get Quotes
+      </button>
     </div>
   </HomeWrapper>)
 
-export default withRouter(Home)
+export default connect(null, {
+  fetchSecretQuote,
+  fetchQuote,
+})(Home)

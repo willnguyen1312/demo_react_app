@@ -21,22 +21,28 @@ const fetchData = (url, options) => {
 }
 
 function* requestLogin({ creds }) {
+  // const config = {
+  //   body: JSON.stringify(creds),
+  //   method: 'post',
+  //   headers: {
+  //     Accept: 'application/json, text/plain, */*',
+  //     'Content-Type': 'application/json',
+  //     Entity: 'contact',
+  //   },
+  // }
   const config = {
-    body: JSON.stringify(creds),
-    method: 'post',
-    headers: {
-      Accept: 'application/json, text/plain, */*',
-      'Content-Type': 'application/json',
-      Entity: 'contact',
-    },
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: `username=${creds.get('username')}&password=${creds.get('password')}`,
   }
-  const { result, error } = yield call(
-    fetchData,
-    'https://hmsra-gateway.azurewebsites.net/api/authentication/auth/login',
-    config,
-  )
 
-  localStorage.setItem('access_token', result.payload.access_token)
+  const url = 'http://localhost:3001/sessions/create'
+  // const url = 'https://hmsra-gateway.azurewebsites.net/api/authentication/auth/login'
+
+  const { result, error } = yield call(fetchData, url, config)
+
+  // localStorage.setItem('access_token', result.payload.access_token)
+  localStorage.setItem('access_token', result.access_token)
 
   if (error) {
     // yield put(getAPIDataError(error))

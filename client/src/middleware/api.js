@@ -1,4 +1,5 @@
-const BASE_URL = 'https://hmsra-gateway.azurewebsites.net/api/'
+// const BASE_URL = 'https://hmsra-gateway.azurewebsites.net/api/'
+const BASE_URL = 'http://localhost:3001/api/'
 
 function callApi(endpoint, authenticated) {
   const token = localStorage.getItem('access_token') || null
@@ -52,9 +53,9 @@ export default store => next => action => {
   // Passing the authenticated boolean back in our data will let
   // us distinguish between normal and secret quotes
   return callApi(endpoint, authenticated).then(
-    response =>
+    quote =>
       next({
-        response,
+        quote,
         authenticated,
         type: successType,
       }),

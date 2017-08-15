@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { connect } from 'react-redux'
-// import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 // import { FormGroup, FormControl, ControlLabel } from 'react-bootstrap'
 // import LoaderButton from '../../components/LoaderButton'
 import { requestLogin } from './actions'
@@ -103,4 +103,4 @@ const Login = ({ requestLogin: login }) =>
 // export default withRouter(Login)
 export default connect(null, {
   requestLogin,
-})(Login)
+})(withRouter(Login))
