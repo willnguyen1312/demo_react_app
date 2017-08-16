@@ -1,6 +1,6 @@
 Demonstatrion of my expetise on React's ecosystem
 
-# Create react redux app
+# Create react redux app playground
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).<br>
 The project includes extra redux packages, improved file structure and node.js server wired up
 
