@@ -27,3 +27,5 @@ devDependencies:
 - CSS-in-JS
 - Code splitting based on Routes and Components
 - Progressive Web App - Service Worker with cache first stategy
+- Integrate redux's api middleware
+- Google Material Design - Material UI
