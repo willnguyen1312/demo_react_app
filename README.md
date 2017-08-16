@@ -22,6 +22,7 @@ The project includes extra redux packages, improved file structure and node.js s
 
 devDependencies:
 - eslint (based on Airbnb rules)
+- pre-commit (git hook - make sure tests and linting passed)
 
 ## Outstanding features that are added to the app
 - CSS-in-JS
