@@ -4,6 +4,16 @@
   "main": "index.js",
   "author": "Nam Nguyen <nam.nguyen@huntermacdonald.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "build": "cd client && yarn build",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "client": "cd client && yarn start",
+    "server": "nodemon app.js",
+    "serve": "concurrently \"yarn server\" \"yarn client\"",
+    "setup": "yarn && cd client && yarn",
+    "production": "yarn build && yarn server"
+  },
   "dependencies": {
     "compression": "^1.7.0",
     "express": "^4.15.3"
@@ -18,27 +28,6 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^4.0.3",
-    "nodemon": "^1.11.0",
-    "pre-commit": "^1.2.2"
-  },
-  "scripts": {
-    "start": "node app.js",
-    "build": "cd client && yarn build",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
-    "client": "cd client && yarn start",
-    "server": "nodemon app.js",
-    "serve": "concurrently \"yarn server\" \"yarn client\"",
-    "setup": "yarn && cd client && yarn",
-    "production": "yarn build && yarn server",
-    "lint:staged": "lint-staged"
-  },
-  "pre-commit": "lint:staged",
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
+    "nodemon": "^1.11.0"
   }
 }

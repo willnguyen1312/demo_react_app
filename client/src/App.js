@@ -28,9 +28,8 @@ class App extends Component {
     this.props.history.push('/login')
   }
   render() {
-    const token = localStorage.getItem('access_token') || null
     const childProps = {
-      userToken: token,
+      userToken: this.state.userToken,
       updateUserToken: this.updateUserToken,
     }
     return (
@@ -44,7 +43,7 @@ class App extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav pullRight>
-              {token
+              {this.state.userToken
                 ? <NavItem onClick={this.handleLogout}>Logout</NavItem>
                 : [
                   <RouteNavItem key={1} onClick={this.handleNavLink} href="/signup">
