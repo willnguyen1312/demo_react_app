@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node app.js",
-    "build": "cd client && yarn build",
+    "build": "cd client && yarn && yarn build",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
     "client": "cd client && yarn start",
     "server": "nodemon app.js",
